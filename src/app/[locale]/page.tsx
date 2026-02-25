@@ -1,11 +1,11 @@
 import { useTranslations } from 'next-intl'
+import { setRequestLocale } from 'next-intl/server'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import {
   Clock,
   LogIn,
   LogOut,
   Phone,
-  Mail,
   MapPin,
   Wifi,
   Car,
@@ -20,24 +20,9 @@ export function generateStaticParams() {
   return ['en', 'de', 'it', 'hr'].map((locale) => ({ locale }))
 }
 
-export default function HotelInfoPage() {
+export default function HotelInfoPage({ params }: { params: { locale: string } }) {
+  setRequestLocale(params.locale)
   const t = useTranslations()
-
-  const attractions = [
-    { icon: '⛪', labelKey: 'explore.basilicaLabel', descKey: 'explore.basilicaDesc' },
-    { icon: '🏛️', labelKey: 'explore.oldtownLabel', descKey: 'explore.oldtownDesc' },
-    { icon: '🏖️', labelKey: 'explore.beachesLabel', descKey: 'explore.beachesDesc' },
-    { icon: '🍽️', labelKey: 'explore.restaurantsLabel', descKey: 'explore.restaurantsDesc' },
-    { icon: '🚗', labelKey: 'explore.daytripsLabel', descKey: 'explore.daytripsDesc' },
-  ] as const
-
-  const facilities = [
-    { icon: <Wifi className="w-4 h-4 text-blue-500 shrink-0" />, labelKey: 'dining.wifiLabel', valueKey: 'dining.wifiValue' },
-    { icon: <Clock className="w-4 h-4 text-indigo-500 shrink-0" />, labelKey: 'dining.receptionLabel', valueKey: 'dining.receptionValue' },
-    { icon: <Car className="w-4 h-4 text-gray-500 shrink-0" />, labelKey: 'dining.parkingLabel', valueKey: 'dining.parkingValue' },
-    { icon: <Luggage className="w-4 h-4 text-teal-500 shrink-0" />, labelKey: 'dining.luggageLabel', valueKey: 'dining.luggageValue' },
-    { icon: <MapPin className="w-4 h-4 text-red-400 shrink-0" />, labelKey: 'dining.conciergeLabel', valueKey: 'dining.conciergeValue' },
-  ] as const
 
   return (
     <div className="min-h-screen flex items-start justify-center p-4 py-8 relative overflow-hidden">
@@ -67,7 +52,6 @@ export default function HotelInfoPage() {
             <p className="mt-2 text-sm text-gray-500 font-medium tracking-wide uppercase">
               {t('header.subtitle')}
             </p>
-            {/* Language switcher */}
             <div className="absolute top-4 right-4">
               <LanguageSwitcher />
             </div>
@@ -144,19 +128,22 @@ export default function HotelInfoPage() {
                   {t('dining.breakfastTitle')}
                 </h3>
                 <div className="space-y-1.5 text-sm text-gray-700">
-                  {(
-                    [
-                      ['breakfastLabel', 'breakfastValue'],
-                      ['locationLabel', 'locationValue'],
-                      ['styleLabel', 'styleValue'],
-                      ['dietsLabel', 'dietsValue'],
-                    ] as const
-                  ).map(([lk, vk]) => (
-                    <div key={lk} className="flex justify-between gap-4">
-                      <span className="text-gray-500 shrink-0">{t(`dining.${lk}`)}:</span>
-                      <span className="font-medium text-right">{t(`dining.${vk}`)}</span>
-                    </div>
-                  ))}
+                  <div className="flex justify-between gap-4">
+                    <span className="text-gray-500 shrink-0">{t('dining.breakfastLabel')}:</span>
+                    <span className="font-medium text-right">{t('dining.breakfastValue')}</span>
+                  </div>
+                  <div className="flex justify-between gap-4">
+                    <span className="text-gray-500 shrink-0">{t('dining.locationLabel')}:</span>
+                    <span className="font-medium text-right">{t('dining.locationValue')}</span>
+                  </div>
+                  <div className="flex justify-between gap-4">
+                    <span className="text-gray-500 shrink-0">{t('dining.styleLabel')}:</span>
+                    <span className="font-medium text-right">{t('dining.styleValue')}</span>
+                  </div>
+                  <div className="flex justify-between gap-4">
+                    <span className="text-gray-500 shrink-0">{t('dining.dietsLabel')}:</span>
+                    <span className="font-medium text-right">{t('dining.dietsValue')}</span>
+                  </div>
                 </div>
               </div>
 
@@ -164,15 +151,26 @@ export default function HotelInfoPage() {
                 {t('dining.facilitiesTitle')}
               </h3>
               <div className="space-y-2 text-sm text-gray-700">
-                {facilities.map(({ icon, labelKey, valueKey }) => (
-                  <div key={labelKey} className="flex items-center gap-3">
-                    {icon}
-                    <span>
-                      <span className="font-medium">{t(labelKey)}:</span>{' '}
-                      {t(valueKey)}
-                    </span>
-                  </div>
-                ))}
+                <div className="flex items-center gap-3">
+                  <Wifi className="w-4 h-4 text-blue-500 shrink-0" />
+                  <span><span className="font-medium">{t('dining.wifiLabel')}:</span> {t('dining.wifiValue')}</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Clock className="w-4 h-4 text-indigo-500 shrink-0" />
+                  <span><span className="font-medium">{t('dining.receptionLabel')}:</span> {t('dining.receptionValue')}</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Car className="w-4 h-4 text-gray-500 shrink-0" />
+                  <span><span className="font-medium">{t('dining.parkingLabel')}:</span> {t('dining.parkingValue')}</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Luggage className="w-4 h-4 text-teal-500 shrink-0" />
+                  <span><span className="font-medium">{t('dining.luggageLabel')}:</span> {t('dining.luggageValue')}</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <MapPin className="w-4 h-4 text-red-400 shrink-0" />
+                  <span><span className="font-medium">{t('dining.conciergeLabel')}:</span> {t('dining.conciergeValue')}</span>
+                </div>
               </div>
             </section>
 
@@ -186,15 +184,41 @@ export default function HotelInfoPage() {
               </h2>
               <p className="text-sm text-gray-600 mb-3">{t('explore.description')}</p>
               <ul className="space-y-2">
-                {attractions.map(({ icon, labelKey, descKey }) => (
-                  <li key={labelKey} className="flex items-start gap-3 text-sm text-gray-700">
-                    <span className="text-base shrink-0">{icon}</span>
-                    <span>
-                      <span className="font-medium text-gray-900">{t(labelKey)}:</span>{' '}
-                      {t(descKey)}
-                    </span>
-                  </li>
-                ))}
+                <li className="flex items-start gap-3 text-sm text-gray-700">
+                  <span className="text-base shrink-0">⛪</span>
+                  <span>
+                    <span className="font-medium text-gray-900">{t('explore.basilicaLabel')}:</span>{' '}
+                    {t('explore.basilicaDesc')}
+                  </span>
+                </li>
+                <li className="flex items-start gap-3 text-sm text-gray-700">
+                  <span className="text-base shrink-0">🏛️</span>
+                  <span>
+                    <span className="font-medium text-gray-900">{t('explore.oldtownLabel')}:</span>{' '}
+                    {t('explore.oldtownDesc')}
+                  </span>
+                </li>
+                <li className="flex items-start gap-3 text-sm text-gray-700">
+                  <span className="text-base shrink-0">🏖️</span>
+                  <span>
+                    <span className="font-medium text-gray-900">{t('explore.beachesLabel')}:</span>{' '}
+                    {t('explore.beachesDesc')}
+                  </span>
+                </li>
+                <li className="flex items-start gap-3 text-sm text-gray-700">
+                  <span className="text-base shrink-0">🍽️</span>
+                  <span>
+                    <span className="font-medium text-gray-900">{t('explore.restaurantsLabel')}:</span>{' '}
+                    {t('explore.restaurantsDesc')}
+                  </span>
+                </li>
+                <li className="flex items-start gap-3 text-sm text-gray-700">
+                  <span className="text-base shrink-0">🚗</span>
+                  <span>
+                    <span className="font-medium text-gray-900">{t('explore.daytripsLabel')}:</span>{' '}
+                    {t('explore.daytripsDesc')}
+                  </span>
+                </li>
               </ul>
             </section>
 
