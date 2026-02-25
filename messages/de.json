@@ -1,0 +1,66 @@
+{
+  "header": {
+    "subtitle": "Gästeinformationen"
+  },
+  "checkin": {
+    "title": "Wichtige Check-in Informationen",
+    "checkinTimeLabel": "Check-in Zeit",
+    "checkinTimeValue": "14:00 – 23:00 Uhr",
+    "checkoutTimeLabel": "Check-out Zeit",
+    "checkoutTimeValue": "Bis 10:00 Uhr",
+    "earlyLateLabel": "Frühe/späte Ankunft",
+    "earlyLateValue": "Bitte kontaktieren Sie uns im Voraus",
+    "documentsLabel": "Erforderliche Dokumente",
+    "documentsValue": "Gültiger Ausweis/Reisepass für alle Gäste",
+    "keyCardsLabel": "Schlüsselkarten",
+    "keyCardsValue": "Werden beim Check-in ausgehändigt",
+    "earlyNoticeTitle": "Hinweis zum frühen Check-in",
+    "earlyNoticeText": "Ihr Check-in ist vor 14:00 Uhr geplant. Bitte kontaktieren Sie uns zur Bestätigung der Zimmerverfügbarkeit."
+  },
+  "dining": {
+    "title": "Restaurant & Ausstattung",
+    "breakfastTitle": "Frühstücksservice",
+    "breakfastLabel": "Frühstück",
+    "breakfastValue": "7:00 – 10:30 Uhr (Kontinentales Buffet)",
+    "locationLabel": "Ort",
+    "locationValue": "Hauptspeisesaal (Erdgeschoss)",
+    "styleLabel": "Art",
+    "styleValue": "Kontinentales Buffet mit frischen lokalen Produkten",
+    "dietsLabel": "Spezielle Ernährung",
+    "dietsValue": "Bitte informieren Sie uns im Voraus",
+    "facilitiesTitle": "Hotelausstattung",
+    "wifiLabel": "Kostenloses WLAN",
+    "wifiValue": "Im gesamten Hotel verfügbar",
+    "receptionLabel": "Rezeption",
+    "receptionValue": "24-Stunden-Rezeptionsservice",
+    "parkingLabel": "Parkplatz",
+    "parkingValue": "7€/Nacht (begrenzte Plätze)",
+    "luggageLabel": "Gepäckaufbewahrung",
+    "luggageValue": "Verfügbar vor dem Check-in und nach dem Check-out",
+    "conciergeLabel": "Concierge",
+    "conciergeValue": "Lokale Touren und Restaurantempfehlungen"
+  },
+  "explore": {
+    "title": "Das schöne Poreč entdecken",
+    "description": "Poreč ist eine wunderschöne istrische Küstenstadt mit reicher Geschichte und schönen Stränden. Hier sind unsere Top-Empfehlungen:",
+    "basilicaLabel": "Euphrasius-Basilika",
+    "basilicaDesc": "UNESCO-Welterbe (5 Gehminuten)",
+    "oldtownLabel": "Altstadt",
+    "oldtownDesc": "Römische Straßen und venezianische Architektur (3 Gehminuten)",
+    "beachesLabel": "Strände",
+    "beachesDesc": "Plava Laguna und Zelena Laguna (10 Min. mit dem Bus)",
+    "restaurantsLabel": "Restaurants",
+    "restaurantsDesc": "Fragen Sie unseren Concierge nach den besten lokalen Tavernen",
+    "daytripsLabel": "Tagesausflüge",
+    "daytripsDesc": "Rovinj, Motovun oder Weinverkostung in den istrischen Hügeln"
+  },
+  "contact": {
+    "title": "Kontaktinformationen",
+    "phoneLabel": "Hoteltelefon",
+    "emailLabel": "E-Mail",
+    "addressLabel": "Adresse",
+    "addressValue": "R Konoba 1, 52440 Poreč, Kroatien",
+    "emergencyLabel": "Notfall",
+    "emergencyValue": "24/7 Rezeptionsservice"
+  }
+}

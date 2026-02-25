@@ -1,0 +1,66 @@
+{
+  "header": {
+    "subtitle": "Informacije za goste"
+  },
+  "checkin": {
+    "title": "Važne informacije o prijavi",
+    "checkinTimeLabel": "Vrijeme prijave",
+    "checkinTimeValue": "14:00 – 23:00 h",
+    "checkoutTimeLabel": "Vrijeme odjave",
+    "checkoutTimeValue": "Do 10:00 h",
+    "earlyLateLabel": "Rani/kasni dolasci",
+    "earlyLateValue": "Molimo kontaktirajte nas unaprijed",
+    "documentsLabel": "Potrebni dokumenti",
+    "documentsValue": "Važeća osobna iskaznica/putovnica za sve goste",
+    "keyCardsLabel": "Ključ-kartice",
+    "keyCardsValue": "Bit će dodijeljene pri prijavi",
+    "earlyNoticeTitle": "Obavijest o ranoj prijavi",
+    "earlyNoticeText": "Vaša prijava je zakazana prije 14:00 sati. Molimo kontaktirajte nas za potvrdu dostupnosti sobe."
+  },
+  "dining": {
+    "title": "Prehrana i sadržaji",
+    "breakfastTitle": "Doručak",
+    "breakfastLabel": "Doručak",
+    "breakfastValue": "7:00 – 10:30 h (Kontinentalni bife)",
+    "locationLabel": "Lokacija",
+    "locationValue": "Glavna blagovaonica (Prizemlje)",
+    "styleLabel": "Vrsta",
+    "styleValue": "Kontinentalni bife sa svježim lokalnim proizvodima",
+    "dietsLabel": "Posebna prehrana",
+    "dietsValue": "Molimo obavijestite nas unaprijed",
+    "facilitiesTitle": "Hotelski sadržaji",
+    "wifiLabel": "Besplatni WiFi",
+    "wifiValue": "Dostupan u cijelom hotelu",
+    "receptionLabel": "Recepcija",
+    "receptionValue": "Recepcija radi 24 sata",
+    "parkingLabel": "Parking",
+    "parkingValue": "7€/noć (ograničen broj mjesta)",
+    "luggageLabel": "Čuvanje prtljage",
+    "luggageValue": "Dostupno prije prijave i nakon odjave",
+    "conciergeLabel": "Concierge",
+    "conciergeValue": "Lokalne ture i preporuke restorana"
+  },
+  "explore": {
+    "title": "Istražite prekrasni Poreč",
+    "description": "Poreč je prekrasni istarski obalni grad s bogatom poviješću i predivnim plažama. Evo naših preporuka:",
+    "basilicaLabel": "Eufrazijeva bazilika",
+    "basilicaDesc": "UNESCO svjetska baština (5 min hoda)",
+    "oldtownLabel": "Stari grad",
+    "oldtownDesc": "Rimske ulice i venetska arhitektura (3 min hoda)",
+    "beachesLabel": "Plaže",
+    "beachesDesc": "Plava Laguna i Zelena Laguna (10 min autobusom)",
+    "restaurantsLabel": "Restorani",
+    "restaurantsDesc": "Pitajte naš concierge za najbolje lokalne konobase",
+    "daytripsLabel": "Izleti",
+    "daytripsDesc": "Rovinj, Motovun ili kušanje vina u istarskim brdima"
+  },
+  "contact": {
+    "title": "Kontakt podaci",
+    "phoneLabel": "Telefon hotela",
+    "emailLabel": "E-mail",
+    "addressLabel": "Adresa",
+    "addressValue": "R Konoba 1, 52440 Poreč, Hrvatska",
+    "emergencyLabel": "Hitni slučajevi",
+    "emergencyValue": "Recepcija dostupna 24/7"
+  }
+}

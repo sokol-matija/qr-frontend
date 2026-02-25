@@ -1,0 +1,66 @@
+{
+  "header": {
+    "subtitle": "Guest Information"
+  },
+  "checkin": {
+    "title": "Important Check-in Information",
+    "checkinTimeLabel": "Check-in time",
+    "checkinTimeValue": "2:00 PM – 11:00 PM",
+    "checkoutTimeLabel": "Check-out time",
+    "checkoutTimeValue": "Until 10:00 AM",
+    "earlyLateLabel": "Early/Late arrivals",
+    "earlyLateValue": "Please contact us in advance",
+    "documentsLabel": "Required documents",
+    "documentsValue": "Valid ID/Passport for all guests",
+    "keyCardsLabel": "Key cards",
+    "keyCardsValue": "Will be provided at check-in",
+    "earlyNoticeTitle": "Early Check-in Notice",
+    "earlyNoticeText": "Your check-in is scheduled before 2:00 PM. Please contact us to confirm room availability."
+  },
+  "dining": {
+    "title": "Dining & Amenities",
+    "breakfastTitle": "Breakfast Service",
+    "breakfastLabel": "Breakfast",
+    "breakfastValue": "7:00 AM – 10:30 AM (Continental buffet)",
+    "locationLabel": "Location",
+    "locationValue": "Main dining room (Ground floor)",
+    "styleLabel": "Style",
+    "styleValue": "Continental buffet with fresh local products",
+    "dietsLabel": "Special diets",
+    "dietsValue": "Please inform us in advance",
+    "facilitiesTitle": "Hotel Facilities",
+    "wifiLabel": "Free WiFi",
+    "wifiValue": "Available throughout the hotel",
+    "receptionLabel": "Reception",
+    "receptionValue": "24-hour front desk service",
+    "parkingLabel": "Parking",
+    "parkingValue": "€7/night (limited spaces)",
+    "luggageLabel": "Luggage storage",
+    "luggageValue": "Available before check-in and after check-out",
+    "conciergeLabel": "Concierge",
+    "conciergeValue": "Local tours and restaurant recommendations"
+  },
+  "explore": {
+    "title": "Explore Beautiful Poreč",
+    "description": "Poreč is a stunning Istrian coastal town with rich history and beautiful beaches. Here are our top recommendations:",
+    "basilicaLabel": "Euphrasian Basilica",
+    "basilicaDesc": "UNESCO World Heritage site (5 min walk)",
+    "oldtownLabel": "Old Town",
+    "oldtownDesc": "Roman streets and Venetian architecture (3 min walk)",
+    "beachesLabel": "Beaches",
+    "beachesDesc": "Plava Laguna and Zelena Laguna (10 min by bus)",
+    "restaurantsLabel": "Restaurants",
+    "restaurantsDesc": "Ask our concierge for the best local taverns",
+    "daytripsLabel": "Day trips",
+    "daytripsDesc": "Rovinj, Motovun, or wine tasting in Istrian hills"
+  },
+  "contact": {
+    "title": "Contact Information",
+    "phoneLabel": "Hotel Phone",
+    "emailLabel": "Email",
+    "addressLabel": "Address",
+    "addressValue": "R Konoba 1, 52440 Poreč, Croatia",
+    "emergencyLabel": "Emergency",
+    "emergencyValue": "24/7 front desk service"
+  }
+}
