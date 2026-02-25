@@ -52,7 +52,6 @@
   "contact": {
     "title": "Contact Information",
     "phoneLabel": "Hotel Phone",
-    "mobileLabel": "Mobile",
     "emailLabel": "Email",
     "websiteLabel": "Website",
     "addressLabel": "Address",
