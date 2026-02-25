@@ -19,7 +19,6 @@ import {
   RefreshCw,
   PawPrint,
   Mail,
-  Smartphone,
   Globe,
 } from 'lucide-react'
 
@@ -238,15 +237,7 @@ export default function HotelInfoPage({ params }: { params: { locale: string } }
                     +385 52 451 811
                   </a>
                 </div>
-                <div className="p-3 bg-gray-50 rounded-lg border border-gray-200">
-                  <p className="text-xs text-gray-500 mb-1 font-medium uppercase tracking-wide flex items-center gap-1">
-                    <Smartphone className="w-3 h-3" />{t('contact.mobileLabel')}
-                  </p>
-                  <a href="tel:+38591451811" className="text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors">
-                    +385 91 451 8111
-                  </a>
-                </div>
-                <div className="p-3 bg-gray-50 rounded-lg border border-gray-200">
+<div className="p-3 bg-gray-50 rounded-lg border border-gray-200">
                   <p className="text-xs text-gray-500 mb-1 font-medium uppercase tracking-wide flex items-center gap-1">
                     <Mail className="w-3 h-3" />{t('contact.emailLabel')}
                   </p>
