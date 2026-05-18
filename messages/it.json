@@ -5,9 +5,9 @@
   "importantInfo": {
     "title": "Informazioni Importanti",
     "checkinLabel": "Check-in",
-    "checkinValue": "14:00 – 23:00",
+    "checkinValue": "dalle 14:00",
     "checkoutLabel": "Check-out",
-    "checkoutValue": "Entro le 10:00 (camera da liberare entro le 11:00)",
+    "checkoutValue": "entro le 11:00",
     "documentsLabel": "Documenti richiesti",
     "documentsValue": "Documento d'identità o passaporto valido per tutti gli ospiti",
     "rulesTitle": "Regolamento interno",

@@ -5,9 +5,9 @@
   "importantInfo": {
     "title": "Wichtige Informationen",
     "checkinLabel": "Check-in",
-    "checkinValue": "14:00 – 23:00 Uhr",
+    "checkinValue": "ab 14:00 Uhr",
     "checkoutLabel": "Check-out",
-    "checkoutValue": "Bis 10:00 Uhr (Zimmer bis 11:00 Uhr räumen)",
+    "checkoutValue": "bis 11:00 Uhr",
     "documentsLabel": "Erforderliche Dokumente",
     "documentsValue": "Gültiger Ausweis oder Reisepass für alle Gäste",
     "rulesTitle": "Hausordnung",

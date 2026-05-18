@@ -5,9 +5,9 @@
   "importantInfo": {
     "title": "Important Information",
     "checkinLabel": "Check-in",
-    "checkinValue": "2:00 PM – 11:00 PM",
+    "checkinValue": "from 2:00 PM",
     "checkoutLabel": "Check-out",
-    "checkoutValue": "By 10:00 AM (room must be vacated by 11:00 AM)",
+    "checkoutValue": "by 11:00 AM",
     "documentsLabel": "Required documents",
     "documentsValue": "Valid ID or Passport for all guests",
     "rulesTitle": "House Rules",

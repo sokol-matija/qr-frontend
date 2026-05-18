@@ -174,11 +174,13 @@ export default function HotelInfoPage({ params }: { params: { locale: string } }
           {/* Header */}
           <div className="py-6 px-6 text-center border-b border-gray-100">
             <div className="mx-auto w-48 h-32 flex items-center justify-center">
-              <img
-                src="/LOGO1-hires.png"
-                alt="Hotel Poreč Logo"
-                className="w-full h-full object-contain"
-              />
+              <a href="https://www.hotelporec.com" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/LOGO1-hires.png"
+                  alt="Hotel Poreč Logo"
+                  className="w-full h-full object-contain"
+                />
+              </a>
             </div>
             <p className="mt-2 text-sm text-gray-500 font-medium tracking-wide uppercase">
               {t('header.subtitle')}
@@ -351,7 +353,7 @@ export default function HotelInfoPage({ params }: { params: { locale: string } }
                   <p className="text-xs text-gray-500 mb-1 font-medium uppercase tracking-wide flex items-center gap-1">
                     <Globe className="w-3 h-3" />{t('contact.websiteLabel')}
                   </p>
-                  <p className="text-sm font-medium text-gray-700">www.hotelporec.com</p>
+                  <a href="https://www.hotelporec.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors">www.hotelporec.com</a>
                 </div>
                 <div className="col-span-2 p-3 bg-gray-50 rounded-lg border border-gray-200">
                   <p className="text-xs text-gray-500 mb-1 font-medium uppercase tracking-wide">
