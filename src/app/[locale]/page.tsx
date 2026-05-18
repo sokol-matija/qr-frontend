@@ -364,12 +364,10 @@ export default function HotelInfoPage({ params }: { params: { locale: string } }
                     {t('contact.socialLabel')}
                   </p>
                   <div className="flex gap-4">
-                    {/* TODO: replace # with actual Instagram URL */}
-                    <a href="#" className="text-sm font-semibold text-pink-600 hover:text-pink-700 transition-colors">
+                    <a href="https://www.instagram.com/hotelporec/" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-pink-600 hover:text-pink-700 transition-colors">
                       Instagram
                     </a>
-                    {/* TODO: replace # with actual Facebook URL */}
-                    <a href="#" className="text-sm font-semibold text-blue-700 hover:text-blue-800 transition-colors">
+                    <a href="https://www.facebook.com/profile.php?id=100057197990320" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-blue-700 hover:text-blue-800 transition-colors">
                       Facebook
                     </a>
                   </div>
