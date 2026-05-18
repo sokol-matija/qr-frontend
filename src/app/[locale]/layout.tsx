@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Hotel Poreč – Guest Information',
   description: 'Check-in information, dining, amenities and local recommendations for Hotel Poreč guests.',
   icons: { icon: '/favicon.ico' },
+  other: {
+    google: 'notranslate',
+  },
 }
 
 type Props = {
@@ -22,7 +25,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} translate="no">
-      <body>
+      <body className="notranslate">
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>

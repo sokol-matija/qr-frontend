@@ -10,8 +10,6 @@
     "checkoutValue": "Do 10:00 h (sobu napustiti do 11:00 h)",
     "documentsLabel": "Potrebni dokumenti",
     "documentsValue": "Važeća osobna iskaznica ili putovnica za sve goste",
-    "earlyNoticeTitle": "Rani dolazak",
-    "earlyNoticeText": "Ako dolazite prije 14:00 h, molimo kontaktirajte nas unaprijed radi potvrde dostupnosti sobe.",
     "rulesTitle": "Kućni red",
     "rule1": "Obroci se poslužuju isključivo u restoranu – hrana i piće ne smiju se iznositi van.",
     "rule2": "Molimo da sve račune za korištene usluge osobno potpisujete.",
@@ -32,8 +30,8 @@
     "title": "Prehrana i sadržaji",
     "mealsTitle": "Radno vrijeme restorana",
     "breakfastLabel": "Doručak",
-    "breakfastOffSeason": "06:00 – 10:00",
-    "breakfastMainSeason": "06:00 – 11:00",
+    "breakfastOffSeason": "07:00 – 10:00",
+    "breakfastMainSeason": "07:00 – 11:00",
     "offSeasonLabel": "Izvan sezone",
     "mainSeasonLabel": "Glavna sezona",
     "locationValue": "Glavna blagovaonica, Prizemlje",
@@ -46,8 +44,16 @@
     "parkingValue": "7€ po noći (ograničen broj mjesta)",
     "luggageLabel": "Čuvanje prtljage",
     "luggageValue": "Prije prijave & nakon odjave",
-    "petsLabel": "Kućni ljubimci",
-    "petsValue": "Dobrodošli – doplata 20€ po boravku"
+    "petsLabel": "Psi (dobrodošli)",
+    "petsValue": "Doplata 20€ po boravku",
+    "bikeGarageLabel": "Garaža za bicikle i motore",
+    "transfersLabel": "Transferi od/do hotela",
+    "transfersValue": "Upit na recepciji",
+    "nearbyTitle": "Okolni sadržaji"
+  },
+  "directBooking": {
+    "title": "Rezervirajte direktno!",
+    "text": "Sviđa vam se kod nas? Sljedeći put rezervirajte direktno za ostvarivanje pogodnosti!"
   },
   "contact": {
     "title": "Kontakt podaci",
@@ -59,7 +65,8 @@
     "inRoomTitle": "Telefon u sobi",
     "inRoomReception": "Recepcija",
     "inRoomOutside": "Vanjska linija",
-    "inRoomRoomToRoom": "Soba na sobu"
+    "inRoomRoomToRoom": "Soba na sobu",
+    "socialLabel": "Pratite nas"
   },
   "tvChannels": {
     "title": "TV kanali",
@@ -69,7 +76,7 @@
     "internationalLabel": "Međunarodni"
   },
   "prices": {
-    "title": "Cijene soba 2025",
+    "title": "Cijene soba 2026",
     "subtitle": "Noćenje s doručkom, po osobi na dan – uključen PDV",
     "seasonA": "Sezona A",
     "seasonADates": "02. sij – 16. tra  &  26. lis – 26. pro",
@@ -106,21 +113,23 @@
     "taxChildren012": "Djeca 0–12",
     "taxChildren012Value": "Besplatno",
     "supplementsTitle": "Dodaci na cijenu",
-    "suppPets": "Kućni ljubimci",
+    "suppPets": "Psi",
     "suppPetsValue": "€20,00",
     "suppParking": "Parking / noć",
     "suppParkingValue": "€7,00",
     "suppShortStay": "Boravak < 3 dana",
     "suppShortStayValue": "+20%",
+    "shortStayNote": "Za boravke kraće od 3 dana cijene su uvećane za 20%.",
     "vatNote": "PDV uključen u sve cijene"
   },
   "laundry": {
     "title": "Pranje i peglanje rublja",
-    "description": "Nudimo uslugu pranja i peglanja odjeće. Obratite se recepciji (int. 9) za cijene i organizaciju preuzimanja.",
-    "towelRentalLabel": "Iznajmljivanje ručnika",
-    "towelRentalValue": "Dostupno na upit – pitajte na recepciji",
-    "towelLossLabel": "Izgubljen ručnik",
-    "towelLossValue": "Naplaćuje se naknada za zamjenu"
+    "description": "Nudimo uslugu pranja i peglanja odjeće. Za preuzimanje se obratite recepciji (int. 9).",
+    "priceListTitle": "Cjenik usluge",
+    "towelRentalLabel": "Najam ručnika / dan",
+    "towelRentalValue": "1,50€",
+    "towelLossLabel": "Gubitak ručnika",
+    "towelLossValue": "14€/kom"
   },
   "health": {
     "title": "Zdravlje i hitni slučajevi",

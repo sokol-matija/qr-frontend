@@ -20,10 +20,94 @@ import {
   PawPrint,
   Mail,
   Globe,
+  Bike,
+  MapPin,
+  Sparkles,
+  Navigation,
 } from 'lucide-react'
 
 export function generateStaticParams() {
   return ['en', 'de', 'it', 'hr'].map((locale) => ({ locale }))
+}
+
+const NEARBY_PLACES = [
+  'Sixt — rent a car',
+  'Dental Implant Studio Dr. Zdravko Rajič',
+  'Happiness (Spa & Wellness)',
+  'Riva Mall (Spar, Mass, InterSport, Ghetaldus...)',
+  'Casino',
+  'Caffe Bar Viale',
+]
+
+const LAUNDRY_ITEMS: Record<string, { name: string; price: string }[]> = {
+  hr: [
+    { name: 'Muške hlače duge', price: '4,00€' },
+    { name: 'Haljine duge', price: '4,00€' },
+    { name: 'Trenirke', price: '4,00€' },
+    { name: 'Bade mantil', price: '2,50€' },
+    { name: 'Spavaćice', price: '2,50€' },
+    { name: 'Jakne ljetne', price: '2,50€' },
+    { name: 'Kratke hlače / košulje', price: '2,10€' },
+    { name: 'Suknje', price: '2,10€' },
+    { name: 'Ručnici veliki', price: '1,10€' },
+    { name: 'Ručnici mali', price: '1,00€' },
+    { name: 'Donje rublje', price: '0,80€' },
+    { name: 'Maramice', price: '0,30€' },
+    { name: 'Čarape', price: '0,45€' },
+    { name: 'Potkošulja', price: '0,95€' },
+    { name: 'Majica', price: '1,50€' },
+  ],
+  en: [
+    { name: 'Long male trousers', price: '€4.00' },
+    { name: 'Long dresses', price: '€4.00' },
+    { name: 'Sport coveralls', price: '€4.00' },
+    { name: 'Bathrobe', price: '€2.50' },
+    { name: 'Pyjamas', price: '€2.50' },
+    { name: 'Summer jacket', price: '€2.50' },
+    { name: 'Shorts / shirts', price: '€2.10' },
+    { name: 'Skirts', price: '€2.10' },
+    { name: 'Big towels', price: '€1.10' },
+    { name: 'Small towels', price: '€1.00' },
+    { name: 'Underwear', price: '€0.80' },
+    { name: 'Handkerchiefs', price: '€0.30' },
+    { name: 'Socks', price: '€0.45' },
+    { name: 'Undershirt', price: '€0.95' },
+    { name: 'T-shirt', price: '€1.50' },
+  ],
+  de: [
+    { name: 'Herrenhose lang', price: '4,00€' },
+    { name: 'Kleid lang', price: '4,00€' },
+    { name: 'Trainingsanzug', price: '4,00€' },
+    { name: 'Bademantel', price: '2,50€' },
+    { name: 'Schlafanzug', price: '2,50€' },
+    { name: 'Sommerjacke', price: '2,50€' },
+    { name: 'Kurze Hose / Hemd', price: '2,10€' },
+    { name: 'Rock', price: '2,10€' },
+    { name: 'Handtuch groß', price: '1,10€' },
+    { name: 'Handtuch klein', price: '1,00€' },
+    { name: 'Unterwäsche', price: '0,80€' },
+    { name: 'Taschentuch', price: '0,30€' },
+    { name: 'Strümpfe', price: '0,45€' },
+    { name: 'Unterhemd', price: '0,95€' },
+    { name: 'T-Shirt', price: '1,50€' },
+  ],
+  it: [
+    { name: 'Pantaloni uomo lunghi', price: '4,00€' },
+    { name: 'Abiti lunghi', price: '4,00€' },
+    { name: 'Tuta sportiva', price: '4,00€' },
+    { name: 'Accappatoio', price: '2,50€' },
+    { name: 'Pigiama', price: '2,50€' },
+    { name: 'Giacca estiva', price: '2,50€' },
+    { name: 'Pantaloncini / camicia', price: '2,10€' },
+    { name: 'Gonna', price: '2,10€' },
+    { name: 'Salvietta grande', price: '1,10€' },
+    { name: 'Salvietta piccola', price: '1,00€' },
+    { name: 'Biancheria intima', price: '0,80€' },
+    { name: 'Fazzoletto', price: '0,30€' },
+    { name: 'Calze', price: '0,45€' },
+    { name: 'Canottiera', price: '0,95€' },
+    { name: 'Maglietta', price: '1,50€' },
+  ],
 }
 
 const TV_CHANNELS = {
@@ -129,18 +213,11 @@ export default function HotelInfoPage({ params }: { params: { locale: string } }
                     {t('importantInfo.checkoutValue')}
                   </div>
                 </div>
-                <div className="flex items-start gap-3 py-2 border-b border-gray-100">
+                <div className="flex items-start gap-3 py-2">
                   <Info className="w-4 h-4 text-purple-400 mt-0.5 shrink-0" />
                   <div>
                     <span className="font-medium text-gray-900">{t('importantInfo.documentsLabel')}:</span>{' '}
                     {t('importantInfo.documentsValue')}
-                  </div>
-                </div>
-                <div className="flex items-start gap-3 py-2">
-                  <AlertCircle className="w-4 h-4 text-amber-500 mt-0.5 shrink-0" />
-                  <div>
-                    <span className="font-medium text-gray-900">{t('importantInfo.earlyNoticeTitle')}:</span>{' '}
-                    {t('importantInfo.earlyNoticeText')}
                   </div>
                 </div>
               </div>
@@ -196,13 +273,17 @@ export default function HotelInfoPage({ params }: { params: { locale: string } }
                 {t('dining.facilitiesTitle')}
               </h3>
               <div className="space-y-2 text-sm text-gray-700">
-                <div className="flex items-center gap-3">
-                  <Wifi className="w-4 h-4 text-blue-500 shrink-0" />
-                  <span>
+                <div className="flex items-start gap-3">
+                  <Wifi className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
+                  <div>
                     <span className="font-medium">{t('dining.wifiLabel')}</span>
-                    {' – '}
-                    <span className="font-mono text-xs bg-gray-100 px-1.5 py-0.5 rounded text-gray-700">{t('dining.wifiPassword')}</span>
-                  </span>
+                    <div className="flex flex-wrap items-center gap-1.5 mt-0.5">
+                      <span className="font-mono text-xs bg-blue-50 px-1.5 py-0.5 rounded text-blue-700">HotelPorecWiFi</span>
+                      <span className="text-xs text-gray-400">·</span>
+                      <span className="text-xs text-gray-500">Password:</span>
+                      <span className="font-mono text-xs bg-gray-100 px-1.5 py-0.5 rounded text-gray-700">{t('dining.wifiPassword')}</span>
+                    </div>
+                  </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Car className="w-4 h-4 text-gray-500 shrink-0" />
@@ -216,6 +297,27 @@ export default function HotelInfoPage({ params }: { params: { locale: string } }
                   <PawPrint className="w-4 h-4 text-amber-500 shrink-0" />
                   <span><span className="font-medium">{t('dining.petsLabel')}:</span> {t('dining.petsValue')}</span>
                 </div>
+                <div className="flex items-center gap-3">
+                  <Bike className="w-4 h-4 text-green-500 shrink-0" />
+                  <span className="font-medium">{t('dining.bikeGarageLabel')}</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Navigation className="w-4 h-4 text-purple-400 shrink-0" />
+                  <span><span className="font-medium">{t('dining.transfersLabel')}:</span> {t('dining.transfersValue')}</span>
+                </div>
+              </div>
+
+              {/* Nearby amenities */}
+              <h3 className="font-medium text-sm uppercase tracking-wide text-purple-600 mb-2 mt-4">
+                {t('dining.nearbyTitle')}
+              </h3>
+              <div className="space-y-1.5 text-sm text-gray-700">
+                {NEARBY_PLACES.map((place, idx) => (
+                  <div key={idx} className="flex items-center gap-2">
+                    <MapPin className="w-3.5 h-3.5 text-purple-400 shrink-0" />
+                    <span>{place}</span>
+                  </div>
+                ))}
               </div>
             </section>
 
@@ -256,6 +358,21 @@ export default function HotelInfoPage({ params }: { params: { locale: string } }
                     {t('contact.addressLabel')}
                   </p>
                   <p className="text-sm font-medium text-gray-800">{t('contact.addressValue')}</p>
+                </div>
+                <div className="col-span-2 p-3 bg-gray-50 rounded-lg border border-gray-200">
+                  <p className="text-xs text-gray-500 mb-2 font-medium uppercase tracking-wide">
+                    {t('contact.socialLabel')}
+                  </p>
+                  <div className="flex gap-4">
+                    {/* TODO: replace # with actual Instagram URL */}
+                    <a href="#" className="text-sm font-semibold text-pink-600 hover:text-pink-700 transition-colors">
+                      Instagram
+                    </a>
+                    {/* TODO: replace # with actual Facebook URL */}
+                    <a href="#" className="text-sm font-semibold text-blue-700 hover:text-blue-800 transition-colors">
+                      Facebook
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -311,7 +428,19 @@ export default function HotelInfoPage({ params }: { params: { locale: string } }
 
             <hr className="border-gray-200" />
 
-            {/* ── 5. Room Prices 2025 ── */}
+            {/* ── Direct Booking Promo ── */}
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl p-4 text-white text-center shadow-md">
+              <div className="flex items-center justify-center gap-2 mb-1">
+                <Sparkles className="w-4 h-4 text-yellow-300" />
+                <p className="font-bold text-sm">{t('directBooking.title')}</p>
+                <Sparkles className="w-4 h-4 text-yellow-300" />
+              </div>
+              <p className="text-xs text-blue-100">{t('directBooking.text')}</p>
+            </div>
+
+            <hr className="border-gray-200" />
+
+            {/* ── 5. Room Prices 2026 ── */}
             <section>
               <h2 className="flex items-center gap-2 text-lg font-semibold text-gray-900 mb-1">
                 <Banknote className="w-5 h-5 text-emerald-600" />
@@ -388,12 +517,17 @@ export default function HotelInfoPage({ params }: { params: { locale: string } }
                       <span>{t('prices.suppParking')}</span>
                       <span className="font-medium">{t('prices.suppParkingValue')}</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>{t('prices.suppShortStay')}</span>
-                      <span className="font-medium text-red-600">{t('prices.suppShortStayValue')}</span>
-                    </div>
                   </div>
                 </div>
+              </div>
+
+              {/* Short stay surcharge — prominent standalone card */}
+              <div className="mt-3 p-3 bg-red-50 border border-red-200 rounded-lg flex items-center justify-between gap-3">
+                <div>
+                  <p className="text-xs font-bold text-red-700">{t('prices.suppShortStay')}</p>
+                  <p className="text-xs text-red-500 mt-0.5">{t('prices.shortStayNote')}</p>
+                </div>
+                <span className="text-xl font-bold text-red-600 shrink-0">{t('prices.suppShortStayValue')}</span>
               </div>
 
               {/* Residence tax */}
@@ -431,16 +565,33 @@ export default function HotelInfoPage({ params }: { params: { locale: string } }
                 {t('laundry.title')}
               </h2>
               <p className="text-sm text-gray-600 mb-3">{t('laundry.description')}</p>
-              <div className="space-y-1.5 text-sm text-gray-700">
-                <div className="flex justify-between gap-4">
-                  <span className="text-gray-500">{t('laundry.towelRentalLabel')}:</span>
-                  <span className="font-medium text-right">{t('laundry.towelRentalValue')}</span>
+              <details className="group">
+                <summary className="flex items-center gap-2 cursor-pointer select-none list-none text-sm font-medium text-gray-700 hover:text-gray-900 py-2 px-3 bg-gray-50 rounded-lg border border-gray-200 [&::-webkit-details-marker]:hidden">
+                  <List className="w-4 h-4 text-gray-500 shrink-0" />
+                  <span>{t('laundry.priceListTitle')}</span>
+                  <span className="ml-auto text-gray-400 text-xs transition-transform group-open:rotate-180 inline-block">▼</span>
+                </summary>
+                <div className="mt-2 overflow-x-auto rounded-lg border border-gray-200">
+                  <table className="w-full text-xs">
+                    <tbody>
+                      {(LAUNDRY_ITEMS[params.locale] ?? LAUNDRY_ITEMS.hr).map((item, idx) => (
+                        <tr key={idx} className="border-t border-gray-50 first:border-0 hover:bg-gray-50">
+                          <td className="p-2 text-gray-600">{item.name}</td>
+                          <td className="p-2 text-right font-semibold text-cyan-700 whitespace-nowrap">{item.price}</td>
+                        </tr>
+                      ))}
+                      <tr className="border-t border-gray-200 bg-cyan-50">
+                        <td className="p-2 text-gray-600">{t('laundry.towelRentalLabel')}</td>
+                        <td className="p-2 text-right font-semibold text-cyan-700">{t('laundry.towelRentalValue')}</td>
+                      </tr>
+                      <tr className="border-t border-gray-100">
+                        <td className="p-2 text-gray-600">{t('laundry.towelLossLabel')}</td>
+                        <td className="p-2 text-right font-semibold text-red-600">{t('laundry.towelLossValue')}</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-                <div className="flex justify-between gap-4">
-                  <span className="text-gray-500">{t('laundry.towelLossLabel')}:</span>
-                  <span className="font-medium text-right">{t('laundry.towelLossValue')}</span>
-                </div>
-              </div>
+              </details>
             </section>
 
             <hr className="border-gray-200" />

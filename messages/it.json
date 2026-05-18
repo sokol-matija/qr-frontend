@@ -10,8 +10,6 @@
     "checkoutValue": "Entro le 10:00 (camera da liberare entro le 11:00)",
     "documentsLabel": "Documenti richiesti",
     "documentsValue": "Documento d'identità o passaporto valido per tutti gli ospiti",
-    "earlyNoticeTitle": "Arrivo anticipato",
-    "earlyNoticeText": "Se si prevede di arrivare prima delle 14:00, si prega di contattarci in anticipo per confermare la disponibilità della camera.",
     "rulesTitle": "Regolamento interno",
     "rule1": "I pasti vengono serviti esclusivamente nel ristorante – non è consentito portare fuori cibo o bevande.",
     "rule2": "Si prega di firmare personalmente tutti i conti per i servizi fruiti.",
@@ -32,8 +30,8 @@
     "title": "Ristorazione e Servizi",
     "mealsTitle": "Orari del Ristorante",
     "breakfastLabel": "Colazione",
-    "breakfastOffSeason": "06:00 – 10:00",
-    "breakfastMainSeason": "06:00 – 11:00",
+    "breakfastOffSeason": "07:00 – 10:00",
+    "breakfastMainSeason": "07:00 – 11:00",
     "offSeasonLabel": "Bassa stagione",
     "mainSeasonLabel": "Alta stagione",
     "locationValue": "Sala da pranzo principale, Piano terra",
@@ -46,8 +44,16 @@
     "parkingValue": "€7 a notte (posti limitati)",
     "luggageLabel": "Deposito bagagli",
     "luggageValue": "Prima del check-in & dopo il check-out",
-    "petsLabel": "Animali domestici",
-    "petsValue": "Benvenuti – supplemento di €20 per soggiorno"
+    "petsLabel": "Cani (benvenuti)",
+    "petsValue": "Supplemento di €20 per soggiorno",
+    "bikeGarageLabel": "Garage per biciclette e moto",
+    "transfersLabel": "Trasferimenti da/per l'hotel",
+    "transfersValue": "Informarsi alla reception",
+    "nearbyTitle": "Strutture nelle vicinanze"
+  },
+  "directBooking": {
+    "title": "Prenota direttamente!",
+    "text": "Vi è piaciuto il soggiorno? La prossima volta prenotate direttamente per ottenere vantaggi esclusivi!"
   },
   "contact": {
     "title": "Informazioni di contatto",
@@ -59,7 +65,8 @@
     "inRoomTitle": "Telefono in camera",
     "inRoomReception": "Reception",
     "inRoomOutside": "Linea esterna",
-    "inRoomRoomToRoom": "Camera a camera"
+    "inRoomRoomToRoom": "Camera a camera",
+    "socialLabel": "Seguici"
   },
   "tvChannels": {
     "title": "Canali TV",
@@ -69,7 +76,7 @@
     "internationalLabel": "Internazionale"
   },
   "prices": {
-    "title": "Prezzi camere 2025",
+    "title": "Prezzi camere 2026",
     "subtitle": "Pernottamento con colazione, per persona al giorno – IVA inclusa",
     "seasonA": "Stagione A",
     "seasonADates": "02 Gen – 16 Apr  &  26 Ott – 26 Dic",
@@ -106,21 +113,23 @@
     "taxChildren012": "Bambini 0–12",
     "taxChildren012Value": "Gratuito",
     "supplementsTitle": "Supplementi",
-    "suppPets": "Animali domestici",
+    "suppPets": "Cani",
     "suppPetsValue": "€20,00",
     "suppParking": "Parcheggio / notte",
     "suppParkingValue": "€7,00",
     "suppShortStay": "Soggiorno < 3 giorni",
     "suppShortStayValue": "+20%",
+    "shortStayNote": "I soggiorni inferiori a 3 giorni sono soggetti a un supplemento del 20%.",
     "vatNote": "IVA inclusa in tutti i prezzi"
   },
   "laundry": {
     "title": "Lavanderia e Stireria",
-    "description": "Offriamo un servizio di lavaggio e stiratura dei vestiti. Contattare la reception (int. 9) per i prezzi e per organizzare il ritiro.",
-    "towelRentalLabel": "Noleggio asciugamani",
-    "towelRentalValue": "Disponibile su richiesta – chiedere alla reception",
+    "description": "Offriamo un servizio di lavaggio e stiratura dei vestiti. Contattare la reception (int. 9) per il ritiro.",
+    "priceListTitle": "Listino prezzi",
+    "towelRentalLabel": "Noleggio asciugamani / giorno",
+    "towelRentalValue": "1,50€",
     "towelLossLabel": "Asciugamano smarrito",
-    "towelLossValue": "Verrà addebitata una penale"
+    "towelLossValue": "14€/pezzo"
   },
   "health": {
     "title": "Salute & Emergenza",

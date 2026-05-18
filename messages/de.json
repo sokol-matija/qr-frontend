@@ -10,8 +10,6 @@
     "checkoutValue": "Bis 10:00 Uhr (Zimmer bis 11:00 Uhr räumen)",
     "documentsLabel": "Erforderliche Dokumente",
     "documentsValue": "Gültiger Ausweis oder Reisepass für alle Gäste",
-    "earlyNoticeTitle": "Frühankunft",
-    "earlyNoticeText": "Bei Ankunft vor 14:00 Uhr kontaktieren Sie uns bitte im Voraus, um die Zimmerverfügbarkeit zu bestätigen.",
     "rulesTitle": "Hausordnung",
     "rule1": "Mahlzeiten werden nur im Restaurant serviert – Speisen und Getränke dürfen nicht mitgenommen werden.",
     "rule2": "Bitte alle Rechnungen für beanspruchte Leistungen persönlich unterzeichnen.",
@@ -32,8 +30,8 @@
     "title": "Restaurant & Ausstattung",
     "mealsTitle": "Öffnungszeiten Restaurant",
     "breakfastLabel": "Frühstück",
-    "breakfastOffSeason": "06:00 – 10:00",
-    "breakfastMainSeason": "06:00 – 11:00",
+    "breakfastOffSeason": "07:00 – 10:00",
+    "breakfastMainSeason": "07:00 – 11:00",
     "offSeasonLabel": "Nebensaison",
     "mainSeasonLabel": "Hauptsaison",
     "locationValue": "Hauptspeisesaal, Erdgeschoss",
@@ -46,8 +44,16 @@
     "parkingValue": "7€ pro Nacht (begrenzte Plätze)",
     "luggageLabel": "Gepäckaufbewahrung",
     "luggageValue": "Vor dem Check-in & nach dem Check-out",
-    "petsLabel": "Haustiere",
-    "petsValue": "Willkommen – 20€ Aufpreis pro Aufenthalt"
+    "petsLabel": "Hunde (willkommen)",
+    "petsValue": "20€ Aufpreis pro Aufenthalt",
+    "bikeGarageLabel": "Fahrrad- & Motorradgarage",
+    "transfersLabel": "Hotel-Transfers",
+    "transfersValue": "Anfragen an der Rezeption",
+    "nearbyTitle": "Nahegelegene Einrichtungen"
+  },
+  "directBooking": {
+    "title": "Direkt buchen!",
+    "text": "Hat es Ihnen gefallen? Buchen Sie beim nächsten Mal direkt und genießen Sie exklusive Vorteile!"
   },
   "contact": {
     "title": "Kontaktinformationen",
@@ -59,7 +65,8 @@
     "inRoomTitle": "Zimmertelefon",
     "inRoomReception": "Rezeption",
     "inRoomOutside": "Außenleitung",
-    "inRoomRoomToRoom": "Zimmernummer"
+    "inRoomRoomToRoom": "Zimmernummer",
+    "socialLabel": "Folgen Sie uns"
   },
   "tvChannels": {
     "title": "TV-Sender",
@@ -69,7 +76,7 @@
     "internationalLabel": "International"
   },
   "prices": {
-    "title": "Zimmerpreise 2025",
+    "title": "Zimmerpreise 2026",
     "subtitle": "Übernachtung mit Frühstück, pro Person und Tag – inkl. MwSt.",
     "seasonA": "Saison A",
     "seasonADates": "02. Jan. – 16. Apr.  &  26. Okt. – 26. Dez.",
@@ -106,21 +113,23 @@
     "taxChildren012": "Kinder 0–12",
     "taxChildren012Value": "Kostenlos",
     "supplementsTitle": "Zuschläge",
-    "suppPets": "Haustiere",
+    "suppPets": "Hunde",
     "suppPetsValue": "€20,00",
     "suppParking": "Parkplatz / Nacht",
     "suppParkingValue": "€7,00",
     "suppShortStay": "Aufenthalt < 3 Nächte",
     "suppShortStayValue": "+20%",
+    "shortStayNote": "Bei Aufenthalten unter 3 Nächten wird ein Zuschlag von 20% berechnet.",
     "vatNote": "Alle Preise inkl. MwSt."
   },
   "laundry": {
     "title": "Wäsche & Bügelservice",
-    "description": "Wir bieten einen Wäsche- und Bügelservice an. Bitte wenden Sie sich an die Rezeption (Durchwahl 9) für Preise und zur Vereinbarung einer Abholung.",
-    "towelRentalLabel": "Handtuchverleih",
-    "towelRentalValue": "Auf Anfrage – an der Rezeption erfragen",
+    "description": "Wir bieten einen Wäsche- und Bügelservice an. Bitte wenden Sie sich an die Rezeption (Durchwahl 9) für die Abholung.",
+    "priceListTitle": "Preisliste",
+    "towelRentalLabel": "Handtuchverleih / Tag",
+    "towelRentalValue": "1,50€",
     "towelLossLabel": "Verlorenes Handtuch",
-    "towelLossValue": "Ersatzgebühr wird berechnet"
+    "towelLossValue": "14€/Stück"
   },
   "health": {
     "title": "Gesundheit & Notfall",

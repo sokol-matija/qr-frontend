@@ -10,8 +10,6 @@
     "checkoutValue": "By 10:00 AM (room must be vacated by 11:00 AM)",
     "documentsLabel": "Required documents",
     "documentsValue": "Valid ID or Passport for all guests",
-    "earlyNoticeTitle": "Early arrival",
-    "earlyNoticeText": "If arriving before 2:00 PM, please contact us in advance to confirm room availability.",
     "rulesTitle": "House Rules",
     "rule1": "Meals are served in the restaurant only – food and drinks may not be taken out.",
     "rule2": "Please sign all bills for services personally.",
@@ -32,8 +30,8 @@
     "title": "Dining & Amenities",
     "mealsTitle": "Restaurant Hours",
     "breakfastLabel": "Breakfast",
-    "breakfastOffSeason": "06:00 – 10:00",
-    "breakfastMainSeason": "06:00 – 11:00",
+    "breakfastOffSeason": "07:00 – 10:00",
+    "breakfastMainSeason": "07:00 – 11:00",
     "offSeasonLabel": "Off season",
     "mainSeasonLabel": "Main season",
     "locationValue": "Main dining room, Ground floor",
@@ -46,8 +44,16 @@
     "parkingValue": "€7 per night (limited spaces)",
     "luggageLabel": "Luggage storage",
     "luggageValue": "Before check-in & after check-out",
-    "petsLabel": "Pets",
-    "petsValue": "Welcome – €20 supplement per stay"
+    "petsLabel": "Dogs (welcome)",
+    "petsValue": "€20 supplement per stay",
+    "bikeGarageLabel": "Bicycle & motorcycle garage",
+    "transfersLabel": "Hotel transfers",
+    "transfersValue": "Inquire at reception",
+    "nearbyTitle": "Nearby Amenities"
+  },
+  "directBooking": {
+    "title": "Book Direct!",
+    "text": "Enjoyed your stay? Book directly next time to unlock exclusive benefits!"
   },
   "contact": {
     "title": "Contact Information",
@@ -59,7 +65,8 @@
     "inRoomTitle": "In-Room Telephone",
     "inRoomReception": "Reception",
     "inRoomOutside": "Outside line",
-    "inRoomRoomToRoom": "Room to room"
+    "inRoomRoomToRoom": "Room to room",
+    "socialLabel": "Follow us"
   },
   "tvChannels": {
     "title": "TV Channels",
@@ -69,7 +76,7 @@
     "internationalLabel": "International"
   },
   "prices": {
-    "title": "Room Prices 2025",
+    "title": "Room Prices 2026",
     "subtitle": "Bed & Breakfast, per person per day – VAT included",
     "seasonA": "Season A",
     "seasonADates": "02 Jan – 16 Apr  &  26 Oct – 26 Dec",
@@ -106,21 +113,23 @@
     "taxChildren012": "Children 0–12",
     "taxChildren012Value": "Free",
     "supplementsTitle": "Supplements",
-    "suppPets": "Pets",
+    "suppPets": "Dogs",
     "suppPetsValue": "€20.00",
     "suppParking": "Parking / night",
     "suppParkingValue": "€7.00",
     "suppShortStay": "Stay < 3 days",
     "suppShortStayValue": "+20%",
+    "shortStayNote": "Stays shorter than 3 days are subject to a 20% surcharge.",
     "vatNote": "VAT included in all prices"
   },
   "laundry": {
     "title": "Laundry & Ironing",
-    "description": "We offer a clothes washing and ironing service. Contact reception (ext. 9) for pricing and to arrange collection.",
-    "towelRentalLabel": "Towel rental",
-    "towelRentalValue": "Available on request – inquire at reception",
+    "description": "We offer a clothes washing and ironing service. Contact reception (ext. 9) for collection.",
+    "priceListTitle": "Price List",
+    "towelRentalLabel": "Towel rental / day",
+    "towelRentalValue": "€1.50",
     "towelLossLabel": "Lost towel",
-    "towelLossValue": "Replacement fee applies"
+    "towelLossValue": "€14/piece"
   },
   "health": {
     "title": "Health & Emergency",
