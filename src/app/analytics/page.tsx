@@ -1,4 +1,11 @@
-import { getLast30DaysStats, getSnapshots, type AnalyticsStats, type DimStat, type Snapshot } from '@/lib/analytics'
+import {
+  ensureMonthSnapshot,
+  getLastNDaysStats,
+  getSnapshots,
+  type AnalyticsStats,
+  type DimStat,
+  type Snapshot,
+} from '@/lib/analytics'
 
 export const dynamic = 'force-dynamic'
 export const metadata = { title: 'QR skeniranja — Hotel Porec', robots: { index: false } }
@@ -116,23 +123,51 @@ function History({ snapshots }: { snapshots: Snapshot[] }) {
   )
 }
 
-export default async function AnalyticsPage() {
+// Vercel Hobby retains only ~1 month of analytics, so 30 is the longest useful window.
+const RANGES = [7, 14, 30]
+
+export default async function AnalyticsPage({
+  searchParams,
+}: {
+  searchParams: { d?: string }
+}) {
+  const days = RANGES.includes(Number(searchParams.d)) ? Number(searchParams.d) : 30
+
   let stats: AnalyticsStats | null = null
   let error: string | null = null
   try {
-    stats = await getLast30DaysStats()
+    stats = await getLastNDaysStats(days)
   } catch (e) {
     error = e instanceof Error ? e.message : 'Unknown error'
   }
   const snapshots = await getSnapshots().catch(() => [])
+  await ensureMonthSnapshot(snapshots)
 
   return (
     <main className="mx-auto max-w-3xl space-y-4 p-4 sm:p-8">
-      <header>
-        <h1 className="text-xl font-semibold text-gray-900">QR skeniranja — Hotel Porec</h1>
-        <p className="text-sm text-gray-500">
-          Zadnjih 30 dana{stats ? ` (${formatDay(stats.since)} – ${formatDay(stats.until)})` : ''}
-        </p>
+      <header className="flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <h1 className="text-xl font-semibold text-gray-900">QR skeniranja — Hotel Porec</h1>
+          <p className="text-sm text-gray-500">
+            Zadnjih {days} dana
+            {stats ? ` (${formatDay(stats.since)} – ${formatDay(stats.until)})` : ''}
+          </p>
+        </div>
+        <nav className="flex rounded-lg border border-gray-200 bg-white p-0.5 text-sm">
+          {RANGES.map((n) => (
+            <a
+              key={n}
+              href={`/analytics?d=${n}`}
+              className={
+                n === days
+                  ? 'rounded-md bg-gray-900 px-3 py-1 font-medium text-white'
+                  : 'rounded-md px-3 py-1 text-gray-600 hover:bg-gray-50'
+              }
+            >
+              {n}d
+            </a>
+          ))}
+        </nav>
       </header>
       {error ? (
         <div className="rounded-xl border border-red-200 bg-red-50 p-5 text-sm text-red-700">

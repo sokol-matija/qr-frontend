@@ -1,5 +1,11 @@
 import { NextResponse } from 'next/server'
-import { getLast30DaysStats, saveSnapshot, type AnalyticsStats, type DimStat } from '@/lib/analytics'
+import {
+  getLast30DaysStats,
+  getMonthToDateStats,
+  saveSnapshot,
+  type AnalyticsStats,
+  type DimStat,
+} from '@/lib/analytics'
 
 export const dynamic = 'force-dynamic'
 
@@ -53,8 +59,15 @@ export async function GET(req: Request) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
+  // Runs daily: the snapshot is upserted onto this month's row every day, so a
+  // single missed run no longer loses the month. The email still goes out once,
+  // on the 1st (or on demand with ?email=1).
+  const saved = await saveSnapshot(await getMonthToDateStats()).catch((e) => String(e))
+  const emailDue =
+    new Date().getUTCDate() === 1 || new URL(req.url).searchParams.get('email') === '1'
+  if (!emailDue) return NextResponse.json({ saved, emailed: false })
+
   const stats = await getLast30DaysStats()
-  const saved = await saveSnapshot(stats).catch(() => false)
   const dashboardUrl = `https://${req.headers.get('host')}/analytics`
 
   const res = await fetch('https://api.resend.com/emails', {
