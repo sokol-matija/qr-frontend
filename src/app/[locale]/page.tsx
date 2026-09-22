@@ -146,13 +146,13 @@ export default function HotelInfoPage({ params }: { params: { locale: string } }
   ]
 
   const roomRows = [
-    { label: t('prices.superiorDouble'), prices: [56, 70, 87, 106], superior: true },
-    { label: t('prices.superiorSingle'), prices: [83, 108, 139, 169], superior: true },
-    { label: t('prices.doubleRoom'), prices: [47, 57, 69, 90] },
-    { label: t('prices.singleRoom'), prices: [70, 88, 110, 144] },
-    { label: t('prices.tripleRoom'), prices: [47, 57, 69, 90] },
-    { label: t('prices.familyRoom'), note: t('prices.familyRoomNote'), prices: [47, 57, 69, 90] },
-    { label: t('prices.rooftopApt'), note: t('prices.rooftopAptNote'), prices: [250, 300, 360, 460], perApt: true },
+    { label: t('prices.superiorDouble'), prices: [56, 70, 87, 106], anchor: 87, superior: true },
+    { label: t('prices.superiorSingle'), prices: [83, 108, 139, 169], anchor: 139, superior: true },
+    { label: t('prices.doubleRoom'), prices: [47, 57, 69, 90], anchor: 69 },
+    { label: t('prices.singleRoom'), prices: [70, 88, 110, 144], anchor: 110 },
+    { label: t('prices.tripleRoom'), prices: [47, 57, 69, 90], anchor: 69 },
+    { label: t('prices.familyRoom'), note: t('prices.familyRoomNote'), prices: [47, 57, 69, 90], anchor: 69 },
+    { label: t('prices.rooftopApt'), note: t('prices.rooftopAptNote'), prices: [250, 300, 360, 460], anchor: 360, perApt: true },
   ]
 
   return (
@@ -467,6 +467,10 @@ export default function HotelInfoPage({ params }: { params: { locale: string } }
                       {SEASONS.map((s) => (
                         <th key={s.key} className="text-center p-2 text-gray-600 font-medium w-12">{s.key}</th>
                       ))}
+                      <th className="text-center p-2 text-blue-700 font-semibold w-16 bg-blue-50 border-l-2 border-blue-200 leading-tight">
+                        {t('prices.anchorPrice')}
+                        <span className="block font-normal text-[10px] text-blue-500">{t('prices.anchorPriceDate')}</span>
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
@@ -481,6 +485,9 @@ export default function HotelInfoPage({ params }: { params: { locale: string } }
                             {price}€
                           </td>
                         ))}
+                        <td className="text-center p-2 font-bold text-blue-700 bg-blue-50 border-l-2 border-blue-200">
+                          {row.anchor}€
+                        </td>
                       </tr>
                     ))}
                   </tbody>
